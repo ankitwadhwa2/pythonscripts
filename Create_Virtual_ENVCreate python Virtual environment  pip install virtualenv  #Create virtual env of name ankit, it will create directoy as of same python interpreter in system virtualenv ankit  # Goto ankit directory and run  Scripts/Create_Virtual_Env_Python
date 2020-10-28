@@ -1,0 +1,39 @@
+Create python Virtual environment
+
+pip install virtualenv
+
+#Create virtual env of name ankit, it will create directoy as of same python interpreter in system
+virtualenv ankit
+
+# Goto ankit directory and run
+
+Scripts/activate
+
+#It will activate the virtualenv ,
+
+ IN case of error.
+
+#Open powershell in admin mmode and run
+set-executiopolicy remotesigned
+Y
+
+#Now you can open python in this virtual env
+
+
+###If you want to =be created this env same as system than use below flag
+# Goto virtualenv directory and run
+virtualenv --system-site-package  ankit2
+
+#### Create requirement files in current env
+pip freeze > requirements.txt
+
+#### To install packages using requirements.tst files
+copy requirements.txt file to virtualenv directory and run
+pip install -r requiremets.txt
+
+### To deactivate the environmet
+# Goto virtualenv directory and run
+deactivate
+
+
+
