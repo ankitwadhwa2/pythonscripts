@@ -1,0 +1,90 @@
+Date: 9 Dec 2020
+--------------------
+
+### For LOOPS
+
+# mylist = [(1,2),(3,4),(5,6),(7)]
+# mydict = {"name":"ankit", "surname" : "wadhwa" }
+#print((str(mydict)[0:5]))
+#out  = dict((str(mydict.items()))[0:1])
+#print(out)
+# for a,b in mydict.items():
+#     print(a)
+#     print("and")
+# #     print(b)
+# for i in mylist:
+#     pass
+#     print(i)
+#
+# print("printed")
+
+mylist = []
+for i in 'ankit':
+    mylist.append(i)
+print(mylist)
+
+mylist1 = [i for i in 'wadhwa']
+print(mylist1)
+## LIST COMPREHENSIONS
+numlist = [1,2,3,4,5]
+mynum = [i*2 for i in numlist]
+print(mynum)
+num = [a==2 for a in numlist ]
+print(num)
+evenodd = [x for x in numlist if x%2 == 0 ]
+print(evenodd)
+useofifelse = [x if x%2 ==0 else 'ODD' for x in numlist]
+print(useofifelse)
+nestedloop = [x*y for x in [1,2,3] for y in [10,20,30]]
+print(nestedloop)
+ls1 = ['a','b']
+ls2 = [1,2]
+cls = [zipped for zipped in zip(ls1,ls2)]
+print(cls)
+
+
+------------------------
+
+10 Dec 2020
+---------------------
+# import random
+# ls = [1,2,3,4,56]
+# random.shuffle(ls)
+# print(ls)
+
+
+# def myfunc(x):
+#     return 'Hello' if x else 'GoodBye'
+#
+# a = myfunc(False)
+# print(a)
+# def myfunc(x,y,z):
+#     if z == True:
+#         return x
+#     elif z == False:
+#         return y
+#     else:
+#         pass
+
+#def myfunc(x,y,z):
+#     return x if z else y
+# a =myfunc('ankit','wadhwa',False)
+# print(a)
+
+# def myfunc(x):
+#     return True if x %2 ==0 else False
+# print(myfunc(2))
+
+# def a(*args):
+#     return sum(args)
+# print(a(1,2,3,4))
+
+def myfunc(*args):
+    out =[]
+    for i in args:
+
+        if i%2 ==0:
+            out.append(i)
+    return out
+
+print(myfunc(1,2,3,4))
